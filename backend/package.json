@@ -11,14 +11,20 @@
     "start": "per-env",
     "start:development": "nodemon ./bin/www",
     "start:production": "node ./bin/www",
-    "build": "node psql-setup-script.js"
+    "build": "node psql-setup-script.js",
+    "test": "jest"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.8",
+    "@types/supertest": "^2.0.16",
     "bun-types": "latest",
     "dotenv-cli": "^7.3.0",
+    "jest": "^29.7.0",
     "nodemon": "^3.0.1",
     "sequelize-cli": "^6.6.2",
-    "sqlite3": "^5.1.6"
+    "sqlite3": "^5.1.6",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.1.1"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
