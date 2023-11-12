@@ -3,6 +3,7 @@
     "lib": ["ESNext"],
     "module": "esnext",
     "target": "esnext",
+    "baseUrl": ".",
     "moduleResolution": "node",
     "moduleDetection": "force",
     "noEmit": true,
@@ -13,7 +14,15 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "allowJs": true,
-    "types": ["bun-types", "node", "@types/express", "@types/sequelize"]
+    "types": ["node", "express", "sequelize"],
+    "typeRoots": [
+      "./custom_typings",
+      "./node_modules/@types"
+    ],
+    "paths": {
+      "@/*": ["/src*"]
+      // Add more path mappings as needed
+    }
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
