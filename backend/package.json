@@ -1,7 +1,18 @@
 {
   "name": "backend",
   "module": "index.ts",
-  "type": "module",
+  "type": "commonjs",
+  "bin": {
+    "www": "./bin/www"
+  },
+  "scripts": {
+    "sequelize": "sequelize",
+    "sequelize-cli": "sequelize-cli",
+    "start": "per-env",
+    "start:development": "nodemon ./bin/www",
+    "start:production": "node ./bin/www",
+    "build": "node psql-setup-script.js"
+  },
   "devDependencies": {
     "bun-types": "latest",
     "dotenv-cli": "^7.3.0",
