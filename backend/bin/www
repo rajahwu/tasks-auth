@@ -6,7 +6,7 @@ require('dotenv').config();
 
 const { port } = require('../config');
 
-const app = require('../app.ts');
+const app = require('../src/app.ts');
 const db = require('../db/models');
 
 // Check the database connection before starting the app
