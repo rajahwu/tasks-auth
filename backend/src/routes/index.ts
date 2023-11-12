@@ -1,9 +1,10 @@
 // backend/routes/index.js
-const express = require('express');
-const router = express.Router();
+import { Router, Request, Response } from 'express';
+
+const router = Router();
 
 // Add a XSRF-TOKEN cookie
-router.get("/api/csrf/restore", (req, res) => {
+router.get("/api/csrf/restore", (req: Request, res: Response) => {
   const csrfToken = req.csrfToken();
   res.cookie("XSRF-TOKEN", csrfToken);
   res.status(200).json({
