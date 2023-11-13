@@ -6,6 +6,7 @@
     "baseUrl": ".",
     "moduleResolution": "node",
     "moduleDetection": "force",
+    "esModuleInterop": true,
     "noEmit": true,
     "strict": true,
     "downlevelIteration": true,
@@ -20,7 +21,7 @@
       "./node_modules/@types"
     ],
     "paths": {
-      "@/*": ["/src*"]
+      "@/*": ["src/*", "db/*", "config/*"],
       // Add more path mappings as needed
     }
   },
